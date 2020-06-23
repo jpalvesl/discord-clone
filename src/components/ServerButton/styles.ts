@@ -14,19 +14,21 @@ export const Button = styled.button<Props>`
 
   margin-bottom: 8px;
 
-  background-color: ${props => props.isHome ? 'var(--rocketseat)' : 'var(--primary)'};
+  background-color: ${props => props.isHome ? 'var(--discord)' : 'var(--primary)'};
+
   cursor: pointer;
   position: relative;
 
   > img {
-    height: 24px;
-    width: 24px;
+    height: 32px;
+    width: 32px;
   }
 
   &::before {
     content: '';
     width: 9px;
-    height: 9px;
+    height: ${props => props.isHome ? '100%' : '9px'};
+    max-height: 40px;
 
     position: absolute;
     left: -17px;
@@ -34,7 +36,8 @@ export const Button = styled.button<Props>`
     background-color: var(--white);
     border-radius: 50%;
 
-    display: ${props => props.hasNotifications ? 'inline' : 'none'}
+    display: ${props => props.hasNotifications || props.isHome ? 'inline-block' : 'none'};
+    transition: all 400ms;
   }
 
   &::after {
@@ -64,6 +67,22 @@ export const Button = styled.button<Props>`
   &.active,
   &:hover {
     border-radius: 16px;
-    background-color: ${props => props.isHome ? 'var(--rocketseat)' : 'var(--discord)'}
+    background-color: var(--discord);
+  }
+  
+  &:hover {
+    &::before {
+      height: 32px;
+      border-radius: 30%;
+      display: inline-block;
+    }
+  }
+  
+  &.active {
+    &::before {
+      height: 40px ;
+      border-radius: 30%;
+      display: inline-block;
+    }
   }
 `;

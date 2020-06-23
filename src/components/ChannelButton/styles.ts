@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Hashtag } from 'styled-icons/heroicons-outline';
-import { PersonAdd, Settings } from 'styled-icons/material';
+import { PersonAdd, Settings, VolumeUp } from 'styled-icons/material';
 
 export const Container = styled.div`
   display: flex;
@@ -9,6 +9,7 @@ export const Container = styled.div`
 
   cursor: pointer;
   padding: 5px 3px;
+  margin-bottom: 3px;
   border-radius: 5px;
 
   background-color: transparent;
@@ -26,6 +27,10 @@ export const Container = styled.div`
     }
   }
 
+  div + div {
+    z-index: -1;
+  }
+
   &:hover, 
   &.active {
     background-color: var(--quinary);
@@ -33,10 +38,21 @@ export const Container = styled.div`
     > div span {
       color: var(--white);
     }
+
+    div + div {
+      z-index: 0;
+    }
   }
 `;
 
 export const HashTagIcon = styled(Hashtag)`
+  width: 20px;
+  height: 20px;
+
+  color: var(--symbol);
+`;
+
+export const VolumeUpIcon = styled(VolumeUp)`
   width: 20px;
   height: 20px;
 

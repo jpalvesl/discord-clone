@@ -15,6 +15,7 @@ export const Category = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 16px;
   margin-bottom: 6px;
 
   > span {
