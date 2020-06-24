@@ -30,7 +30,14 @@ export const Category = styled.div`
     font-size: 12px;
     font-weight: 500;
     color: var(--gray);
-  }  
+    
+  }
+  
+  &:hover {
+    > span {
+      color: var(--white);
+    }
+  }
 `;
 
 export const ExpandIcon = styled(ExpandMore)`
