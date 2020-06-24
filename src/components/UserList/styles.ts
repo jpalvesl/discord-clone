@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface AvatarProps {
+  ImageUrl?: string;
+}
+
 export const Container = styled.div`
   grid-area: UL;
 
@@ -77,14 +81,15 @@ export const User = styled.div`
   }
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.div<AvatarProps>`
   flex-shrink: 0;
 
   width: 32px;
   height: 32px;
 
   border-radius: 50%;
-  background-color: var(--primary);
+  background-image: url(${props =>  props.ImageUrl}); 
+  background-size: 32px;
 
   &.bot {
     background-color: var(--mention-detail);

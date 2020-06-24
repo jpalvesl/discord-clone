@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Mic, Headset, Settings } from 'styled-icons/material';
 
+import img from '../../assets/avatars/jaum.png';
+
 export const Container = styled.div`
   grid-area: UI;
 
@@ -23,7 +25,8 @@ export const Avatar = styled.div`
   height: 32px;
 
   border-radius: 50%;
-  background-color: var(--gray);
+  background: url(${img});
+  background-size: 32px;
 `;
 
 export const UserData = styled.div`

@@ -27,7 +27,8 @@ export const Button = styled.button<Props>`
   &::before {
     content: '';
     width: 9px;
-    height: ${props => props.isHome ? '100%' : '9px'};
+    height: ${props => props.isHome ? '100%' : '0px'};
+    height: ${props => props.hasNotifications && '9px'};
     max-height: 40px;
 
     position: absolute;
@@ -36,8 +37,8 @@ export const Button = styled.button<Props>`
     background-color: var(--white);
     border-radius: 50%;
 
-    display: ${props => props.hasNotifications || props.isHome ? 'inline-block' : 'none'};
-    transition: all 400ms;
+    display: inline-block;
+    transition: all 300ms;
   }
 
   &::after {

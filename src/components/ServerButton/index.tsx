@@ -25,6 +25,7 @@ const ServerButton: React.FC<Props> = ({
       className={selected ? 'active' : ''}
     >
       {isHome && <img src={logo} alt="Home"/>}
+      {isHome || <span style={{ fontSize: 24, color: 'white' }} >Y</span>}
     </Button>
   )
 }
