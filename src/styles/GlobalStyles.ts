@@ -36,6 +36,8 @@ export default createGlobalStyle`
     --mention-detail: #f9a839;
     --mention-message: #413f3f;
 
+    --server-selected: #43b581;
+
     --link: #5d80d6;
 
     --rocketseat: #6633cc;

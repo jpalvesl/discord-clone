@@ -3,18 +3,27 @@ import React from 'react';
 import { Container, Role, User, Avatar } from './styles';
 
 import users from '../../assets/data/users';
+import { generateColor } from '../../utils/generateColor';
 
 interface UserProps {
   nickname: string;
   isBot?: boolean;
-  ImageUrl: any;
+  offline?: boolean;
+  ImageUrl?: any;
+  color?: any;
 }
 
 
-const UserRow: React.FC<UserProps> = ({ nickname, isBot, ImageUrl }) => {
+const UserRow: React.FC<UserProps> = ({ 
+  nickname, 
+  isBot, 
+  offline,
+  ImageUrl, 
+  color 
+}) => {
   return (
-    <User>
-      <Avatar ImageUrl={ImageUrl} className={isBot ? 'bot' : ''} />
+    <User offline={offline}>
+      <Avatar color={color} ImageUrl={ImageUrl} className={isBot ? 'bot' : ''} />
       <strong>{nickname}</strong>
 
       {isBot && <span>Bot</span>}
@@ -32,30 +41,21 @@ const UserList: React.FC = () => {
           nickname={user.nickname}
           isBot={user.isBot}
           ImageUrl={user.ImageUrl}
+          color={generateColor()}
         />
       ))}
 
 
-      {/* <Role>Offline - 18</Role>
-      <UserRow nickname="Rei das webnamoradas" />
-      <UserRow nickname="Vythor" />
-      <UserRow nickname="Talarico" isBot/>
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" />
-      <UserRow nickname="John Doe" /> */}
+      <Role>Offline - {users.offline.length}</Role>
+        {users.offline.map((user, index) => (
+          <UserRow
+            key={index} 
+            nickname="John Doe" 
+            color={generateColor()} 
+            offline
+          />
+
+        ))}
     </Container>
   )
 }

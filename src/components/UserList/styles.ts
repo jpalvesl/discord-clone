@@ -1,7 +1,13 @@
 import styled from 'styled-components';
+import logo from '../../assets/Logo.svg';
 
 interface AvatarProps {
   ImageUrl?: string;
+  color: string;
+}
+
+interface UserProps {
+  offline?: boolean;
 }
 
 export const Container = styled.div`
@@ -41,7 +47,7 @@ export const Role = styled.span`
   color: var(--gray);
 `;
 
-export const User = styled.div`
+export const User = styled.div<UserProps>`
   margin-top: 5px;
   padding: 5px;
 
@@ -51,9 +57,11 @@ export const User = styled.div`
   border-radius: 4px;
   background: transparent;
   transition: background 200ms;
+  opacity: ${props => props.offline ? '0.23' : '1'};
 
   &:hover {
-    background: rgba(255, 255, 255, .1)
+    background: rgba(255, 255, 255, .1);
+    opacity: 1;
   }
 
   > strong {
@@ -88,8 +96,11 @@ export const Avatar = styled.div<AvatarProps>`
   height: 32px;
 
   border-radius: 50%;
-  background-image: url(${props =>  props.ImageUrl}); 
-  background-size: 32px;
+  background-color: ${props => props.color};
+  background-image: url(${props =>  props.ImageUrl ? props.ImageUrl : logo}); 
+  background-size: ${props =>  props.ImageUrl ? '32px': '24px'};
+  background-repeat: no-repeat;
+  background-position: center;
 
   &.bot {
     background-color: var(--mention-detail);
