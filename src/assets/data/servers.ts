@@ -6,6 +6,10 @@ import devAcademy from '../serverIcons/dev-academy.png';
 import dininho from '../serverIcons/dininho.png';
 import he4rt from '../serverIcons/he4rt.png';
 import rocket from '../serverIcons/rocket.png';
+import julia  from '../serverIcons/lab-julia.png';
+import inhae from '../serverIcons/inhae.png';
+import peroxissomos from '../serverIcons/peroxissomos.png';
+import uepb  from '../serverIcons/uepb.png';
 
 export default [
   {
@@ -43,6 +47,24 @@ export default [
   {
     iconImage: rocket,
     hasNotifications: true,
+    mentions: 5
+  },
+  {
+    iconImage: julia,
+    hasNotifications: true,
+  },
+  {
+    iconImage: inhae,
+    hasNotifications: false,
+  },
+  {
+    iconImage: peroxissomos,
+    hasNotifications: true,
+    mentions: 5
+  },
+  {
+    iconImage: uepb,
+    hasNotifications: false,
     mentions: 5
   },
 ]

@@ -27,6 +27,14 @@ const ServerList: React.FC = () => {
         
       ))}
       
+      <ServerButton>
+        <span>YÊ</span>
+      </ServerButton>
+      
+      <ServerButton>
+        <span>K's</span>
+      </ServerButton>
+
       <ServerButton notServer>
         <Plus size={32} />
       </ServerButton>

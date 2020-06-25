@@ -28,9 +28,10 @@ export const Button = styled.button<Props>`
     width: 32px;
   }
 
-  font-size: 24px;
-  color: var(--symbol);
+  font-size: 18px;
+  color: ${props => props.notServer ? 'var(--symbol)' : 'var(--white)'};
 
+  
   &::before {
     content: '';
     width: 9px;
@@ -76,7 +77,6 @@ export const Button = styled.button<Props>`
   &:hover {
     border-radius: 16px;
     background-color: ${props => props.notServer ? 'var(--server-selected)' : 'var(--discord)'};
-    color: #fff;
   }
   
   &:hover {

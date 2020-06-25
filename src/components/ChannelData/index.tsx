@@ -3,6 +3,9 @@ import React, { useRef, useEffect } from 'react';
 import { Container, Messages, InputWrapper, Input, InputIcon } from './styles';
 import ChannelMessage, { Mention } from '../ChannelMessage';
 
+import chatMessages from '../../assets/data/chat';
+import users from '../../assets/data/users';
+
 const ChannelData: React.FC = () => {
   const messagesRef = useRef() as React.MutableRefObject<HTMLDivElement>
 
@@ -17,19 +20,21 @@ const ChannelData: React.FC = () => {
   return (
     <Container>
       <Messages ref={messagesRef}>
-        {Array.from(Array(15).keys()).map((n) => (
+        {chatMessages.map((message, index) => (
           <ChannelMessage
-            key={n} 
-            author="João Lima"
-            date="15/06/1999"
-            content="Mensagens testando o bot"
+            key={index} 
+            author={message.author.nickname}
+            date="17/06/2020"
+            content={message.content}
+            ImageUrl={message.author.ImageUrl}
           />
         ))}
 
         <ChannelMessage 
-          author="Vythor"
-          date="15/06/1999"
+          author={users.online[3].nickname}
+          date="25/06/2020"
           hasMention
+          ImageUrl={users.online[3].ImageUrl}
           content={
             <>
               Oi <Mention>@Bumbum Guloso</Mention> Pera ai João Gostoso
@@ -38,14 +43,14 @@ const ChannelData: React.FC = () => {
           />
 
         <ChannelMessage 
-          author="Talarico"
-          date="15/06/1999"
+          author={users.online[1].nickname}
+          date="26/06/2020"
+          ImageUrl={users.online[1].ImageUrl}
           content={
             <>
               Oi <Mention>@Rei das webnamoradas</Mention> como vai a nossa namorada?
             </>
           }
-          isBot
         />
 
       </Messages>

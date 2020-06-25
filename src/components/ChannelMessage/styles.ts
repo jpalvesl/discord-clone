@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface AvatarProps {
+  ImageUrl?: any;
+}
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -21,7 +25,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.div<AvatarProps>`
   flex-shrink: 0;
   width: 40px;
   height: 40px;
@@ -29,6 +33,9 @@ export const Avatar = styled.div`
 
 
   background-color: var(--secondary);
+  background-image: url(${props => props.ImageUrl});
+  background-size: 40px;
+  background-repeat: no-repeat;
   border-radius: 50%;
 
   &.bot {
