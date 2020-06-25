@@ -47,7 +47,7 @@ export default {
       "isBot": false,
     },
     {
-      "nickname": "Amju Insensível",
+      "nickname": "Amjah Insensível",
       "isBot": false,
     },
     {
@@ -55,7 +55,7 @@ export default {
       "isBot": false,
     },
     {
-      "nickname": "Amjah Indiferente",
+      "nickname": "Amju Indiferente",
       "isBot": false,
     },
     {
