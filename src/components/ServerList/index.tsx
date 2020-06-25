@@ -6,28 +6,25 @@ import { Container, Separator } from './styles';
 
 import ServerButton from '../ServerButton';
 
-const dataServer = [
-  {
-    children: <span>YU</span>,
-    hasNotifications: true,
-    mentions: 2
-  }
-]
+import dataServer from '../../assets/data/servers';
 
 const ServerList: React.FC = () => {
   return (
     <Container>
-      <ServerButton isHome selected />
+      <ServerButton isHome />
 
       <Separator />
 
-      {dataServer.map(server => (
+      {dataServer.map((server, index) => (
         <ServerButton 
+          key={index}
           hasNotifications={server.hasNotifications}
           mentions={server.mentions}
-        >
-          {server.children}
-        </ServerButton>
+          iconImage={server.iconImage}
+          selected={server.selected}
+        />
+
+        
       ))}
       
       <ServerButton notServer>

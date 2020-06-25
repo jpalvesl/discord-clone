@@ -15,7 +15,11 @@ export const Button = styled.button<Props>`
   margin-bottom: 8px;
 
   background-color: ${props => props.isHome ? 'var(--discord)' : 'var(--primary)'};
-
+  background-image: url(${props =>  props.iconImage}); 
+  background-size: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
   cursor: pointer;
   position: relative;
 
@@ -30,7 +34,7 @@ export const Button = styled.button<Props>`
   &::before {
     content: '';
     width: 9px;
-    height: ${props => props.isHome ? '100%' : '0px'};
+    height: 0px;
     height: ${props => props.hasNotifications && '9px'};
     max-height: 40px;
 
@@ -85,7 +89,7 @@ export const Button = styled.button<Props>`
   
   &.active {
     &::before {
-      height: 40px ;
+      height: 100%;
       border-radius: 30%;
       display: inline-block;
     }

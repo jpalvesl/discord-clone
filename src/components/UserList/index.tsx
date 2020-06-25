@@ -35,9 +35,9 @@ const UserList: React.FC = () => {
   return (
     <Container>
       <Role>Disponível - {users.online.length}</Role>
-      {users.online.map(user => (
+      {users.online.map((user, index) => (
         <UserRow 
-          key={user.nickname}
+          key={index}
           nickname={user.nickname}
           isBot={user.isBot}
           ImageUrl={user.ImageUrl}
@@ -50,7 +50,7 @@ const UserList: React.FC = () => {
         {users.offline.map((user, index) => (
           <UserRow
             key={index} 
-            nickname="John Doe" 
+            nickname={user.nickname} 
             color={generateColor()} 
             offline
           />

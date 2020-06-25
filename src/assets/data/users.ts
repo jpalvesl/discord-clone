@@ -34,6 +34,41 @@ export default {
   ],
 
   "offline": [
-
+    {
+      "nickname": "Amju Bolado",
+      "isBot": false,
+    },
+    {
+      "nickname": "Amju Surtado",
+      "isBot": false,
+    },
+    {
+      "nickname": "Amju Cansado",
+      "isBot": false,
+    },
+    {
+      "nickname": "Amju Insensível",
+      "isBot": false,
+    },
+    {
+      "nickname": "Amjah Vacilona",
+      "isBot": false,
+    },
+    {
+      "nickname": "Amjah Indiferente",
+      "isBot": false,
+    },
+    {
+      "nickname": "Amjah Tiltada",
+      "isBot": false,
+    },
+    {
+      "nickname": "Amju Perdido",
+      "isBot": false,
+    },
+    {
+      "nickname": "Amju Teimoso",
+      "isBot": false,
+    },
   ]
 }

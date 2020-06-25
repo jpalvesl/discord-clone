@@ -10,6 +10,7 @@ export interface Props {
   notServer?: boolean;
   hasNotifications?: boolean;
   mentions?: number;
+  iconImage?: any;
 }
 
 const ServerButton: React.FC<Props> = ({
@@ -18,6 +19,7 @@ const ServerButton: React.FC<Props> = ({
   notServer,
   hasNotifications,
   mentions,
+  iconImage,
   children
 }) => {
   return (
@@ -26,6 +28,7 @@ const ServerButton: React.FC<Props> = ({
       notServer={notServer}
       hasNotifications={hasNotifications}
       mentions={mentions}
+      iconImage={iconImage}
       className={selected ? 'active' : ''}
     >
       {isHome && <img src={logo} alt="Home"/>}
