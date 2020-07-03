@@ -1,44 +1,114 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="Discord icon" src="./src/assets/Logo.svg" width="100"/>
+</p>
+<h1 align="center">
+  Discord clone
+</h1>
 
-## Available Scripts
+<!-- Badges -->
+<p align="center">
 
-In the project directory, you can run:
+  <!-- if your app is a website -->
+  <a href="https://discordcantin-clone.netlify.app" alt="Url do site">
+    <img src="https://img.shields.io/website-up-down-1EAE72-red/http/shields.io.svg" />
+  </a>
 
-### `yarn start`
+  <!-- License -->
+  <a href="./LICENSE" alt="License: MIT">
+    <img src="https://img.shields.io/badge/License-MIT-1EAE72.svg" />
+  </a>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <!-- if your app is a website deployed on Netlify -->
+  <a href="https://discordcantin-clone.netlify.app" alt="Netlify Status">
+    <img src="https://api.netlify.com/api/v1/badges/701df1b4-773e-4442-a364-549670e0f3b9/deploy-status" />
+  </a>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  <br/>
 
-### `yarn test`
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jpalvesl/discord-clone?color=blue">
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <!-- GitHub repo size -->
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/jpalvesl/discord-clone">
 
-### `yarn build`
+  <!-- Social -->  
+  <a href="https://github.com/jpalvesl/discord-clone/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/jpalvesl/discord-clone?style=social">
+  </a>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+</p>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<!-- summary -->
+<p align="center">
+  <a href="#clipboard-descrição">Descrição</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-iniciando-o-projeto">Iniciando o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-o-que-tem-dentro">O que tem dentro?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## :clipboard: Descrição
+Clone do discord feito com ReactJS, tomando como base o [vídeo](https://www.youtube.com/watch?v=x4FdZd2-_uU) da Rocketseat, porém tentando replicar o meu próprio discord adicionando algumas coisas que não estão presentes no video. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :rocket: Iniciando o projeto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Baixando o repositório
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  - Usando Git
+```shell
+  git clone https://github.com/jpalvesl/discord-clone.git
+```
+  - Usando Github CLI
+```shell
+  gh repo clone jpalvesl/discord-clone
+```
+  > :bulb: ou qualquer outra maneira que você preferir
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. Instalando e executando
+  - Usando npm
+```shell
+  npm install
+  npm run start
+```
+  - Usando yarn
+```shell
+  yarn
+  yarn start
+```
 
-## Learn More
+## 🧐 O que tem dentro?
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### :building_construction: Tecnologias
+- [Typescript](https://www.typescriptlang.org)
+- [ReactJS](https://pt-br.reactjs.org)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+### :package: Pacotes
+- [Styled Components](https://styled-components.com)
+- [Styled Icons](https://styled-icons.js.org)
+
+### A quick look at the top-level directories inside the `./src`.
+
+    ./src
+     ├── assets
+     ├── components
+     ├── pages
+     ├── styles
+     ├── utils
+
+1.  **`assets`**: all recursos usados. como imagens, icones etc.
+
+2.  **`components`**: cada componente presente na pagina.
+
+3.  **`styles`**: estilos globais.
+   
+4.  **`utils`**: funções utilitárias.
+
+## :memo: Licença
+
+This project is under the MIT license. See the file [LICENSE](LICENSE) for more details.
+
+---
+
+Feito com 💙 Por [João Lima](https://github.com/jpalvesl)
+
+Based on the [readme template](https://gist.github.com/henry-ns/a00234378353d9ca43e1bfe043202192) by [Henrique Miranda](http://thehenry.dev/)
