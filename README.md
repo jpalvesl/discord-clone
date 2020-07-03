@@ -86,7 +86,7 @@ Clone do discord feito com ReactJS, tomando como base o [vídeo](https://www.you
 - [Styled Components](https://styled-components.com)
 - [Styled Icons](https://styled-icons.js.org)
 
-### A quick look at the top-level directories inside the `./src`.
+### Uma olhada por cima dos diretórios dentro de `./src`.
 
     ./src
      ├── assets
