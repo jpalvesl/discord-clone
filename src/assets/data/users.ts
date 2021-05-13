@@ -7,22 +7,22 @@ import img5 from '../avatars/kurisu.jpg';
 export default {
   "online": [
     {
-      "nickname": "Bumbum Guloso",
+      "nickname": "João Lima",
       "isBot": false,
       "ImageUrl": img1
     },
     {
-      "nickname": "Talarico",
+      "nickname": "Breno",
       "isBot": false,
       "ImageUrl": img2
     },
     {
-      "nickname": "Rei das webnamoradas",
+      "nickname": "Eric",
       "isBot": false,
       "ImageUrl": img3
     },
     {
-      "nickname": "vythor",
+      "nickname": "Victor",
       "isBot": false,
       "ImageUrl": img4
     },

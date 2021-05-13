@@ -70,8 +70,8 @@ export default [
     content: "oxe",
     author: breno,
   },
-  {
-    content: "Fazendo meu jantar porra",
-    author: eric,
-  },
+  // {
+  //   content: "Fazendo meu jantar porra",
+  //   author: eric,
+  // },
 ]
